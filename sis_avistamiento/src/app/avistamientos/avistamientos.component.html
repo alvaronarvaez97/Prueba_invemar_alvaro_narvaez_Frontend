@@ -1,0 +1,28 @@
+<div class="container">
+    <app-encabezado></app-encabezado>
+
+    <div class="mt -5">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre Cientifico</th>
+                <th scope="col">Lugar</th>
+                <th scope="col">Coordenadas</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of avistamiento index as i">
+                <th scope="row">{{i +1}}</th>
+                <td>{{item.nombre_cientifico}}</td>
+                <td>{{item.lugar}}</td>
+                <td>{{item.coordenada}}</td>
+                <td>{{item.autor}}</td>
+                <td>{{item.nota}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
