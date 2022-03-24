@@ -19,6 +19,10 @@
                 <td>{{item.departamento}}</td>
                 <td>{{item.ciudad}}</td>
                 <td>{{item.nombre_lugar}}</td>
+                <td>
+                  <button (click)="Actualizar(item.id)" class="btn btn-warning">Actualizar</button>
+                  <button (click)="Delete(item.id)" class="btn btn-danger">Eliminar</button>
+              </td>
               </tr>
             </tbody>
           </table>

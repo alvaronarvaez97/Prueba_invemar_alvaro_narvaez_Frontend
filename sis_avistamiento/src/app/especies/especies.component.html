@@ -17,6 +17,10 @@
                 <td>{{item.nombre_comun}}</td>
                 <td>{{item.nombre_cientifico}}</td>
                 <td>{{item.id_categoria_toxinica}}</td>
+                <td>
+                  <button (click)="Actualizar(item.id)" class="btn btn-warning">Actualizar</button>
+                  <button (click)="Delete(item.id)" class="btn btn-danger">Eliminar</button>
+              </td>
               </tr>
             </tbody>
           </table>

@@ -1,0 +1,36 @@
+<div class="container">
+    <app-encabezado></app-encabezado>
+<div>
+    <form class="d-flex" [formGroup]="Formulario" (ngSubmit)="onSubmit()">
+        <input class="from-control" type="search" formControlName="especie" placeholder="Buscar por especie" required>
+        <button class="btn btn-outline-success" type="submit" [disabled]="!Formulario.valid">Buscar</button>
+    </form>
+</div>
+<div class="mt -5">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">nombre comun</th>
+            <th scope="col">nombre cientifico</th>
+            <th scope="col">ciudad</th>
+            <th scope="col">lugar</th>
+            <th scope="col">coordenada</th>
+            <th scope="col">autor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of usuario index as i">
+            <th scope="row">{{i +1}}</th>
+            <td>{{item.nombre_comun}}</td>
+            <td>{{item.nombre_cientifico}}</td>
+            <td>{{item.ciudad}}</td>
+            <td>{{item.lugar}}</td>
+            <td>{{item.coordenada}}</td>
+            <td>{{item.autor}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+</div>

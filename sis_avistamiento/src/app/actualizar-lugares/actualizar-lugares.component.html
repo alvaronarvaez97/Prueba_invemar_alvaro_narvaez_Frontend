@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <app-encabezado></app-encabezado>
+    <form [formGroup]="Formulario" (ngSubmit)="onSubmit()">
+        Id: <input type="text" 
+        class="from-control" 
+        formControlName="id" required>
+        <br>
+
+        Pais: <input type="text" 
+        class="from-control" 
+        formControlName="pais" required>
+        Departamento : <input type="text" 
+        class="from-control" 
+        formControlName="departamento" required>
+        Ciudad : <input type="text" 
+        class="from-control" 
+        formControlName="ciudad" required>
+        Nombre del lugar : <input type="text" 
+        class="from-control" 
+        formControlName="nombre_lugar" required>
+
+        <br>
+        <button class="btn btn-primary " type="submit" [disabled]="!Formulario.valid">Actualizar</button>
+
+    </form>
+</div>

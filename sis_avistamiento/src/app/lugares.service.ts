@@ -15,4 +15,11 @@ export class LugaresService {
       return this.http.get(`${this.url}/lugares`);
     }
 
+    deleteLugares(id: any){
+      return this.http.delete(`${this.url}/${id}`)
+    }
+    
+    updateLugares(id: any, form: any){
+      return this.http.put(`${this.url}/${id}`, form)
+    }
 }

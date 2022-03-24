@@ -13,4 +13,13 @@ export class EspeciesService {
   getEspecies(){
     return this.http.get(`${this.url}/especies`);
   }
+
+  deleteEspecie(id: any){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  
+  updateEspecie(id: any, form: any){
+    return this.http.put(`${this.url}/${id}`, form)
+  }
+
 }
